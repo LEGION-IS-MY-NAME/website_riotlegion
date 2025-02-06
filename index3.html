@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOTLEGION | Industrial Music Experience</title>
+    <meta name="description" content="RIOTLEGION: Industrial Music Experience featuring exclusive tracks, dynamic visuals, and more.">
+    <meta name="keywords" content="industrial music, riotlegion, bandcamp, experimental music">
+    <meta name="author" content="RIOTLEGION">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <!-- The div for the fullscreen background with id "bgContainer" -->
+    <div class="fullscreen-bg" id="bgContainer">
+        <img alt="Fullscreen Background" style="opacity: 0;">
+    </div>
+
+    <div id="content">
+        <img src="logo.png" alt="RIOTLEGION Logo">
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Decorative Horizontal Bar">
+        </div>
+
+        <div id="social-links">
+            <a href="index2.html">HOME</a>
+            <a href="origins.html">ORIGINS</a>
+            <a href="https://www.instagram.com/riotlegion.official/">INSTAGRAM</a>
+            <a href="https://www.facebook.com/RiotLegionOfficial/">FACEBOOK</a>
+            <a href="https://www.youtube.com/channel/UCLt4WbnqjuGehHOc8QdeaLw">YOUTUBE</a>
+            <a href="https://open.spotify.com/artist/3At50uAIad8tJkixgSSx6M">SPOTIFY</a>
+            <a href="mailto:riotlegion.official@gmail.com">EMAIL</a>
+        </div>
+
+        <div id="bandcamp">
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=4087858768/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://riotlegion.bandcamp.com/album/legion-of-chaos">Legion of Chaos by RIOTLEGION</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2595516453/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/god-b-less">God(b)less by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3766194424/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/trigger-warning">Trigger Warning by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2569400912/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/machine-liberation">Machine Liberation by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3041565000/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://crunchpod.bandcamp.com/album/refuse-volume-one-crunch-240">Refuse: Volume One By Riotlegion</a>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Decorative Horizontal Bar">
+        </div>
+    </div>
+
+    <!-- JavaScript Section for Slideshow Background -->
+    <script>
+        var bgImages = [
+            "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
+            "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
+        ];
+
+        var bgContainer = document.getElementById("bgContainer");
+        var imgElement = bgContainer.querySelector("img");
+        var currentIndex = 0;
+
+        function changeBackground() {
+            imgElement.style.transition = "opacity 1s ease";
+            imgElement.style.opacity = 0;
+            setTimeout(function () {
+                imgElement.src = bgImages[currentIndex];
+                imgElement.style.opacity = 0.5;
+                currentIndex = (currentIndex + 1) % bgImages.length;
+            }, 1000);
+        }
+
+        setInterval(changeBackground, 6000);
+    </script>
+</body>
+</html>

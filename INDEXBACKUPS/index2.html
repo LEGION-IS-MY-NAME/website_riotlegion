@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOTLEGION | Industrial Music Experience</title>
+    <style>
+        @font-face {
+            font-family: octin;
+            src: url(octin.ttf);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: black;
+            color: white;
+            font-family: octin, Arial, sans-serif;
+        }
+
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .fullscreen-bg img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: opacity 1s ease; /* Add transition property */
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: auto; /* Allow scrolling */
+        }
+
+        #content img {
+            width: 40%;
+        }
+
+        #social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 40px; /* Adjust the font size as needed */
+        }
+
+        #social-links a:hover {
+            color: gray;
+        }
+
+        .horizontal-bar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .horizontal-bar img {
+            width: 40%;
+            height: 10px;
+        }
+
+        #bandcamp {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        #bandcamp iframe {
+            border: 0;
+            width: 350px;
+            height: 470px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The div for the fullscreen background with id "bgContainer" -->
+    <div class="fullscreen-bg" id="bgContainer">
+        <!-- Background images will be added dynamically with JavaScript -->
+        <img alt="Fullscreen Background" style="opacity: 0;">
+    </div>
+
+    <div id="content">
+        <img src="logo.png" alt="Logo">
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Horizontal Bar">
+        </div>
+
+        <div id="social-links">
+            <a href="https://www.instagram.com/riotlegion.official/">INSTAGRAM</a>
+            <a href="https://www.facebook.com/RiotLegionOfficial/">FACEBOOK</a>
+            <a href="https://www.youtube.com/channel/UCLt4WbnqjuGehHOc8QdeaLw">YOUTUBE</a>
+            <a href="mailto:your.email@example.com">EMAIL</a>
+        </div>
+
+        <div id="bandcamp">
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4087858768/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/">
+                <a href="https://riotlegion.bandcamp.com/album/legion-of-chaos">Legion of Chaos by RIOTLEGION</a>
+            </iframe>
+
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2595516453/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/">
+                <a href="https://blindmiceproductions.bandcamp.com/album/god-b-less">God(b)less by Riotlegion</a>
+            </iframe>
+
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3766194424/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/">
+                <a href="https://blindmiceproductions.bandcamp.com/album/trigger-warning">Trigger Warning by Riotlegion</a>
+            </iframe>
+
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2569400912/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/">
+                <a href="https://blindmiceproductions.bandcamp.com/album/machine-liberation">Machine Liberation by Riotlegion</a>
+            </iframe>
+
+            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3041565000/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/">
+                <a href="https://crunchpod.bandcamp.com/album/refuse-volume-one-crunch-240">Refuse: Volume One (CRUNCH 240) by Various Artists</a>
+            </iframe>
+        </div>
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Horizontal Bar">
+        </div>
+    </div>
+
+    <!-- JavaScript Section for Slideshow Background -->
+    <script>
+        var bgImages = [
+            "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
+            "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
+        ];
+
+        var bgContainer = document.getElementById("bgContainer");
+        var imgElement = bgContainer.querySelector("img");
+        var currentIndex = 0;
+
+        function changeBackground() {
+            imgElement.style.transition = "opacity 1s ease"; // Add this line
+            imgElement.style.opacity = 0; // Set opacity to 0 before changing the image
+            setTimeout(function () {
+                imgElement.src = bgImages[currentIndex];
+                imgElement.style.opacity = 0.5; // Set opacity back to 0.5 after changing the image
+                currentIndex = (currentIndex + 1) % bgImages.length;
+            }, 1000); // Delay the image change to match the transition duration
+            setTimeout(changeBackground, 6000); // Change image every 6 seconds (including the transition duration)
+        }
+
+        changeBackground();
+    </script>
+
+</body>
+
+</html>

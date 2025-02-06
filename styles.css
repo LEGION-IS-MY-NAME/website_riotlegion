@@ -1,0 +1,137 @@
+@font-face {
+    font-family: octin;
+    src: url(octin.ttf) format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: black;
+    color: white;
+    font-family: octin, Arial, sans-serif;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fullscreen-bg img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+#content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;       /* Ensure it takes full screen height */
+    overflow: auto;          /* Allow scrolling for smaller screens */
+    text-align: center;      /* Center-align all text */
+    padding: 10px;           /* Add padding for breathing room */
+    box-sizing: border-box;  /* Include padding in width/height calculations */
+}
+
+#content img {
+    width: 40%;
+}
+
+#social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 40px;
+    -webkit-text-stroke: 0.5px black; /* Add black stroke to text */
+}
+
+#social-links a:hover {
+    color: gray;
+}
+
+.horizontal-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.horizontal-bar img {
+    width: 40%;
+    height: 10px;
+}
+
+#bandcamp {
+    display: flex;
+    flex-wrap: wrap;          /* Allow wrapping on smaller screens */
+    justify-content: center;  /* Center-align the embeds in rows */
+    gap: 20px;                /* Add spacing between embeds */
+    padding: 20px;            /* Add padding around the section */
+}
+
+.bandcamp-embed iframe {
+    max-width: 100%;          /* Ensure the iframe scales correctly */
+    height: auto;             /* Preserve aspect ratio */
+    border: 0;                /* Clean up borders */
+}
+
+#main-content h2, #main-content h3, #main-content p, #main-content ul, #main-content li, #discography p {
+    -webkit-text-stroke: 0.5px black; /* Add black stroke to all text in content */
+}
+
+#main-content h2, #main-content h3 {
+    font-size: 2.2em; /* Slightly smaller headers */
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.6; /* Improved readability */
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+#main-content p {
+    font-size: 1.5em; /* Reduced paragraph font size */
+    line-height: 1.6; /* More balanced readability */
+    text-align: center; /* Align text for easier reading */
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+#main-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	font-size: 3em;
+}
+
+#main-content li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#main-content li span {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+#discography {
+    font-size: 1em;
+    line-height: 1.3;
+    text-align: center; /* Align text to the center for better readability */
+    color: white; /* White text */
+    text-shadow: 0px 0px 2px black; /* Shadow for contrast */
+    margin: 20px; /* Add spacing around the section */
+}
+
+#discography p {
+    margin: 5px 0; /* Spacing between entries */
+}

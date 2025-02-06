@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOTLEGION | Industrial Music Experience</title>
+    <meta name="description" content="RIOTLEGION: Industrial Music Experience featuring exclusive tracks, dynamic visuals, and more.">
+    <meta name="keywords" content="industrial music, riotlegion, bandcamp, experimental music">
+    <meta name="author" content="RIOTLEGION">
+   <style>
+    @font-face {
+        font-family: octin;
+        src: url(octin.ttf) format("truetype");
+    }
+
+    body {
+	
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: black;
+        color: white;
+        font-family: octin, Arial, sans-serif;
+		align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+    }
+
+    .fullscreen-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .fullscreen-bg img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.5;
+        transition: opacity 1s ease;
+    }
+
+   #content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;       /* Ensure it takes full screen height */
+    overflow: auto;          /* Allow scrolling for smaller screens */
+    text-align: center;      /* Center-align all text */
+    padding: 20px;           /* Add padding for breathing room */
+    box-sizing: border-box;  /* Include padding in width/height calculations */
+}
+
+
+    #content img {
+        width: 40%;
+    }
+
+    #social-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 40px;
+    }
+
+    #social-links a:hover {
+        color: gray;
+    }
+
+    .horizontal-bar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .horizontal-bar img {
+        width: 40%;
+        height: 10px;
+    }
+
+    #main-content h2, #main-content h3 {
+        font-size: 2.2em; /* Slightly smaller headers */
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.6; /* Improved readability */
+        -webkit-text-stroke: 0.2px black;
+        color: white;
+        text-shadow: 0px 0px 2px black;
+    }
+
+    #main-content p {
+        font-size: 1.5em; /* Reduced paragraph font size */
+        line-height: 1.6; /* More balanced readability */
+        text-align: center; /* Align text for easier reading */
+        -webkit-text-stroke: 0.2px black;
+        color: white;
+        text-shadow: 0px 0px 2px black;
+    }
+
+   #main-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-content li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#main-content li span {
+    font-size: 1.4em;
+    line-height: 1.6;
+    -webkit-text-stroke: 0.4px black;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+#discography {
+    font-size: 1em;
+    line-height: 1.3;
+    text-align: center; /* Align text to the center for better readability */
+    -webkit-text-stroke: 0.2px black; /* Stroke for WebKit-based browsers */
+    color: white; /* White text */
+    text-shadow: 0px 0px 2px black; /* Shadow for contrast */
+    margin: 20px; /* Add spacing around the section */
+}
+
+#discography p {
+    margin: 5px 0; /* Spacing between entries */
+}
+</style>
+
+
+
+</head>
+
+<body>
+    
+	
+	<!-- The div for the fullscreen background with id "bgContainer" -->
+    <div class="fullscreen-bg" id="bgContainer">
+        <img alt="Fullscreen Background" style="opacity: 0;">
+    </div>
+
+    <div id="content">
+        <img src="logo.png" alt="RIOTLEGION Logo">
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Decorative Horizontal Bar">
+        </div>
+
+        <div id="social-links">
+            <a href="index.html">HOME</a>
+             <a href="disc.html">Discography</a> 
+			<a href="origins.html">ORIGINS</a>
+            <a href="https://www.instagram.com/riotlegion.official/">INSTAGRAM</a>
+            <a href="https://www.facebook.com/RiotLegionOfficial/">FACEBOOK</a>
+            <a href="https://www.youtube.com/channel/UCLt4WbnqjuGehHOc8QdeaLw">YOUTUBE</a>
+            <a href="https://open.spotify.com/artist/3At50uAIad8tJkixgSSx6M">SPOTIFY</a>
+            <a href="mailto:riotlegion.official@gmail.com">EMAIL</a>
+        </div>
+
+        <div class="horizontal-bar">
+            <img src="hr.png" alt="Decorative Horizontal Bar">
+        </div>
+
+       <div id="main-content">
+	   <br><br><br><br>
+    <span style="font-size: 2.5em; background-color:black;">RIOTLEGION: A HISTORY OF NOISE, FURY, AND REBELLION</span>
+
+    <h3>Origins: Crawling Through the Chaos (Pre-2008)</h3>
+    <p>Detroit: the city where steel and sweat collide, where the air hums with the sound of industry and the underground pulses with raw defiance. <strong>Michael Coultas</strong> was born elsewhere in Michigan, but the city became the proving ground where his earliest projects, <strong>Death Junkie</strong> and <strong>Lo-Fi Legion</strong>, began to carve a path through the industrial noise.</p>
+
+    <p><strong>Death Junkie</strong> was the first salvo—a live industrial noise and power electronics project performed at DIY events just outside Detroit’s industrial orbit. Raw, chaotic, and unfiltered, it was less a sound and more a visceral scream into the void. But for Coultas, it wasn’t enough to simply burn everything down—he wanted to build something new from the wreckage. That something became <strong>Lo-Fi Legion</strong>, a project that merged jagged electronics with industrial beats, packing each track with the volatile energy of a molotov cocktail.</p>
+
+    <p>Detroit’s underground scene latched onto <strong>Lo-Fi Legion</strong> like a live wire. Tracks like <em>"Attack the Innocent"</em> and remixes such as <em>"Happy Fcuking Rifle"</em> (created for a Combichrist remix competition) found their way into the hands of DJs, who spun them deep into the sweaty chaos of late-night industrial events. Coultas wasn’t just an observer of the scene—he was an architect, shaping its sound one distorted track at a time.</p>
+
+    <p>By 2006, though, Coultas and his collaborator, the elusive <strong>tony_rocky_horror</strong>, felt the pull of the unknown. Detroit wasn’t something to run from—it was something to carry forward. Armed with a few thousand dollars, their gear, and no clear plan, the duo headed west. They landed in Seattle with little more than stubborn resolve and a vision to see what could come next. Detroit’s grime and grind never left them, and the memory of DJs blasting Lo-Fi Legion tracks into the night became the bedrock for what came next.</p>
+
+    <div class="horizontal-bar">
+        <img src="hr.png" alt="Decorative Horizontal Bar">
+    </div>
+
+    <h3>The Birth of RiotLegion: A Manifesto in Distortion (2008-Present)</h3>
+    <p>Seattle wasn’t Detroit—it was colder, wetter, and just as unforgiving. But it was a blank canvas, and on it, Coultas and Tony began to piece together something new. <strong>RiotLegion</strong> was born in 2008, not as a continuation but as a reinvention. The project wasn’t just music; it was a war cry, a declaration of defiance wrapped in distortion and fury.</p>
+
+    <p>RiotLegion took the DNA of Death Junkie and Lo-Fi Legion and amplified it with tracker sequencing and analog devices. The result was unrelenting: pounding beats, searing static, and an unapologetic edge. RiotLegion wasn’t about being heard—it was about demanding attention, even if it had to tear the world apart to get it.</p>
+
+    <p>Tony remained an integral part of the process, lending his expertise to mixing, mastering, and creative direction. Even after relocating to New York in 2013, his influence persisted, providing remote support and advice that shaped RiotLegion’s evolving sound.</p>
+
+    
+    
+
+    <div class="horizontal-bar">
+        <img src="hr.png" alt="Decorative Horizontal Bar">
+    </div>
+
+    <h3>Live and Lethal: RiotLegion On Stage</h3>
+    <p>RiotLegion doesn’t perform—it detonates. At events like <strong>Mechanismus Festival</strong> and club stages across Seattle, <strong>Michael Coultas</strong> transforms venues into battlegrounds. The shows are nothing short of sonic rituals: an energy so raw and volatile it feels like an exorcism of chaos itself.</p>
+
+    <p>With meticulously curated visuals and distortion-soaked soundscapes, Coultas commands the stage with the presence of a preacher delivering a sermon in static and fury. The rhythm and noise collide in a cacophony that leaves no one untouched. Every track, every beat, is a challenge: <em>Will you endure? Will you rise above?</em> RiotLegion doesn’t just confront its audience; it envelops them, drags them through the dirt, and forces them to confront the raw truths of their own existence.</p>
+
+    <div class="horizontal-bar">
+        <img src="hr.png" alt="Decorative Horizontal Bar">
+    </div>
+
+    <h3>Philosophy: Sound as a Weapon, Chaos as Creation</h3>
+    <p>For RiotLegion, music is far more than an arrangement of sounds. It’s rebellion given form, a philosophy carved out of distortion and rage. Drawing inspiration from the cut-up chaos of <strong>William S. Burroughs</strong> and the provocations of <strong>Genesis P-Orridge</strong>, <strong>Michael Coultas</strong> wields sound as both scalpel and hammer—a tool to dissect societal decay and smash through the barriers of complacency.</p>
+
+    <p>Each track is a sonic sigil, a ritual encoded in noise and rhythm, imbued with the intent to provoke, challenge, and destroy. RiotLegion doesn’t provide easy answers or shallow comfort. The ethos is clear:</p>
+    <p><br>
+        No safe spaces.<br>
+        No apologies.<br>
+        No compromise.<br></p>
+    
+
+    <p>RiotLegion is both mirror and weapon, reflecting the fractured, crumbling world around us while offering the means to shatter it entirely. The music channels the frustration of modern life—the rage of being alive in a world that often feels like it’s falling apart—and turns it into something cathartic and transformative.</p>
+
+    <div class="horizontal-bar">
+        <img src="hr.png" alt="Decorative Horizontal Bar">
+    </div>
+
+    <h3>Legacy and the Road Ahead: Noise Without End</h3>
+    <p>RiotLegion stands as a testament to the power of sound to disrupt, provoke, and liberate. From the sweat-soaked basements of Detroit to the rain-drenched stages of Seattle, <strong>Michael Coultas</strong> has built a project that refuses to conform, to compromise, or to fade quietly into the background.</p>
+
+    <p>The future of RiotLegion is as uncertain as the world it rails against, but that’s precisely the point. With new material lurking on the horizon and a philosophy rooted in evolution through destruction, RiotLegion continues to pull threads of chaos and weave them into a tapestry of defiance. This is not a project bound by trends or expectations—it is a force of nature, pushing forward on its own terms.</p>
+
+    <p>As industrial music splinters and mutates, RiotLegion remains steadfast, a pillar of raw, unapologetic rebellion. The project evolves, but its core remains intact: the will to confront, the power to provoke, and the refusal to compromise. The noise doesn’t stop—it grows louder, sharper, more unrelenting.</p>
+
+    <p>RiotLegion is not just a band. It’s not just music. It’s a manifesto, a weapon, a way forward. As Coultas continues to forge new paths through distortion and chaos, one thing is certain: the rebellion isn’t over. It’s only just begun.</p>
+</div>
+
+<div class="horizontal-bar">
+        <img src="hr.png" alt="Decorative Horizontal Bar">
+    </div>
+<h2>Discography: A Sonic Arsenal</h2>
+
+
+    <!-- JavaScript Section for Slideshow Background -->
+    <script>
+        var bgImages = [
+            "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
+            "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
+        ];
+
+        var bgContainer = document.getElementById("bgContainer");
+        var imgElement = bgContainer.querySelector("img");
+        var currentIndex = 0;
+
+        function changeBackground() {
+            imgElement.style.transition = "opacity 1s ease";
+            imgElement.style.opacity = 0;
+            setTimeout(function () {
+                imgElement.src = bgImages[currentIndex];
+                imgElement.style.opacity = 0.5;
+                currentIndex = (currentIndex + 1) % bgImages.length;
+            }, 1000);
+        }
+
+        setInterval(changeBackground, 6000);
+// Dynamic scaling function for content only
+        function adjustContentZoom() {
+            const designWidth = 1920; // Your website's design width
+            const scale = window.innerWidth / designWidth;
+
+            // Apply scale transformation only to the content
+            const contentElement = document.getElementById('content');
+            contentElement.style.transform = `scale(${scale})`;
+            contentElement.style.transformOrigin = '0 0'; // Scale from the top-left corner
+            contentElement.style.width = `${100 / scale}%`; // Ensure layout doesn't break
+        }
+
+        // Adjust zoom on page load and resize
+        adjustContentZoom();
+        window.addEventListener('resize', adjustContentZoom);   
+ </script>
+</body>
+
+</html>
