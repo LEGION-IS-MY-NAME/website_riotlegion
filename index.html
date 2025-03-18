@@ -165,45 +165,77 @@
         </div>
     </div>
 
-    <!-- JavaScript Section for Slideshow Background -->
-    <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         var bgImages = [
             "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
             "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
         ];
 
+        // Shuffle the images randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+        }
+
+        shuffleArray(bgImages); // Randomize images before starting
+
         var bgContainer = document.getElementById("bgContainer");
-        var imgElement = bgContainer.querySelector("img");
-        var currentIndex = 0;
+        var imgElement = document.createElement("img");
+
+        // Set the first image immediately
+        imgElement.src = bgImages[0];
+        imgElement.style.position = "absolute";
+        imgElement.style.width = "100%";
+        imgElement.style.height = "100%";
+        imgElement.style.objectFit = "cover";
+        imgElement.style.opacity = 1;
+        imgElement.style.transition = "opacity 1s ease";
+
+        bgContainer.appendChild(imgElement);
+
+        var currentIndex = 1; // Start from the second image
+
+        function preloadImages() {
+            bgImages.forEach(function (src) {
+                var img = new Image();
+                img.src = src;
+            });
+        }
 
         function changeBackground() {
-            imgElement.style.transition = "opacity 1s ease";
             imgElement.style.opacity = 0;
             setTimeout(function () {
                 imgElement.src = bgImages[currentIndex];
-                imgElement.style.opacity = 0.5;
+                imgElement.style.opacity = 1;
                 currentIndex = (currentIndex + 1) % bgImages.length;
-            }, 1000);
+            }, 500); // Reduced delay before switching
         }
 
+        setTimeout(preloadImages, 1000); // Preload images after 1s delay
         setInterval(changeBackground, 6000);
-// Dynamic scaling function for content only
-        function adjustContentZoom() {
-            const designWidth = 1920; // Your website's design width
-            const scale = window.innerWidth / designWidth;
 
-            // Apply scale transformation only to the content
+        // Dynamic scaling function for content only
+        function adjustContentZoom() {
+            const designWidth = 1920;
+            const scale = window.innerWidth / designWidth;
             const contentElement = document.getElementById('content');
-            contentElement.style.transform = `scale(${scale})`;
-            contentElement.style.transformOrigin = '0 0'; // Scale from the top-left corner
-            contentElement.style.width = `${100 / scale}%`; // Ensure layout doesn't break
+
+            requestAnimationFrame(() => {
+                contentElement.style.transform = `scale(${scale})`;
+                contentElement.style.transformOrigin = '0 0';
+                contentElement.style.width = `${100 / scale}%`;
+            });
         }
 
-        // Adjust zoom on page load and resize
         adjustContentZoom();
-        window.addEventListener('resize', adjustContentZoom);   
+        window.addEventListener('resize', adjustContentZoom);
+    });
+</script>
 
- </script>
 </body>
 
 </html>
