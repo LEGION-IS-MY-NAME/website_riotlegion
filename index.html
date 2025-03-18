@@ -164,26 +164,30 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var bgImages = [
-                "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
-                "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
-            ];
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var bgImages = [
+            "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
+            "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
+        ];
 
-            var bgContainer = document.getElementById("bgContainer");
-            var imgElement = bgContainer.querySelector("img");
+        var bgContainer = document.getElementById("bgContainer");
+        var imgElement = bgContainer.querySelector("img");
 
-            if (!imgElement) {
-                console.error("No <img> found inside #bgContainer");
-                return;
-            }
+        if (!imgElement) {
+            console.error("No <img> found inside #bgContainer");
+            return;
+        }
 
-            var randomIndex = Math.floor(Math.random() * bgImages.length);
-            imgElement.src = bgImages[randomIndex];
-            imgElement.style.opacity = 1;
-        });
-    </script>
+        var randomIndex = Math.floor(Math.random() * bgImages.length);
+        imgElement.src = bgImages[randomIndex];
+        imgElement.style.opacity = 1;
+
+        // Apply darkening effect
+        imgElement.style.filter = "brightness(70%)"; // Adjust this for more/less darkness
+    });
+</script>
+
 
 </body>
 </html>
