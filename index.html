@@ -33,25 +33,28 @@
         }
 
         .fullscreen-bg img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
             width: 100vw;
             height: 100vh;
             object-fit: cover;
+            transform: translate(-50%, -50%);
             opacity: 0.5;
             transition: opacity 1s ease;
         }
 
- #content {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    min-height: 100vh;       /* Ensure it takes full screen height */
-    overflow: auto;          /* Allow scrolling for smaller screens */
-    text-align: center;      /* Center-align all text */
-    padding: 10px;           /* Add padding for breathing room */
-    box-sizing: border-box;  /* Include padding in width/height calculations */
-}
-
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: auto;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
 
         #content img {
             width: 40%;
@@ -80,23 +83,19 @@
             height: 10px;
         }
 
-#bandcamp {
-    display: flex;
-    flex-wrap: wrap;          /* Allow wrapping on smaller screens */
-    justify-content: center;  /* Center-align the embeds in rows */
-    gap: 20px;                /* Add spacing between embeds */
-    padding: 20px;            /* Add padding around the section */
-}
+        #bandcamp {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
 
-.bandcamp-embed iframe {
-    max-width: 100%;          /* Ensure the iframe scales correctly */
-    height: auto;             /* Preserve aspect ratio */
-    border: 0;                /* Clean up borders */
-}
-
-
-
-
+        .bandcamp-embed iframe {
+            max-width: 100%;
+            height: auto;
+            border: 0;
+        }
     </style>
 </head>
 
@@ -106,8 +105,6 @@
         <img alt="Fullscreen Background" style="opacity: 0;">
     </div>
 
-
-
     <div id="content">
         <img src="logo.png" alt="RIOTLEGION Logo">
 
@@ -115,102 +112,73 @@
             <img src="hr.png" alt="Decorative Horizontal Bar">
         </div>
 
- <div id="social-links">
+        <div id="social-links">
             <a href="index.html">HOME</a>
-<a href="disc.html">Discography</a> 
-			<a href="origins.html">ORIGINS</a>
+            <a href="disc.html">Discography</a>
+            <a href="origins.html">ORIGINS</a>
             <a href="https://www.instagram.com/riotlegion.official/">INSTAGRAM</a>
             <a href="https://www.facebook.com/RiotLegionOfficial/">FACEBOOK</a>
             <a href="https://www.youtube.com/channel/UCLt4WbnqjuGehHOc8QdeaLw">YOUTUBE</a>
             <a href="https://open.spotify.com/artist/3At50uAIad8tJkixgSSx6M">SPOTIFY</a>
             <a href="mailto:riotlegion.official@gmail.com">EMAIL</a>
         </div>
-<br>
-    
-    <p>New release coming soon...be prepared.</p>
+        <br>
+        <p>New release coming soon...be prepared.</p>
+        <br>
 
-
-<br>
-
- <div id="bandcamp">
-    <div class="bandcamp-embed">
-        <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=4087858768/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
-            <a href="https://riotlegion.bandcamp.com/album/legion-of-chaos">Legion of Chaos by RIOTLEGION</a>
-        </iframe>
-    </div>
-    <div class="bandcamp-embed">
-        <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2595516453/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
-            <a href="https://blindmiceproductions.bandcamp.com/album/god-b-less">God(b)less by Riotlegion</a>
-        </iframe>
-    </div>
-    <div class="bandcamp-embed">
-        <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3766194424/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
-            <a href="https://blindmiceproductions.bandcamp.com/album/trigger-warning">Trigger Warning by Riotlegion</a>
-        </iframe>
-    </div>
-    <div class="bandcamp-embed">
-        <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2569400912/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
-            <a href="https://blindmiceproductions.bandcamp.com/album/machine-liberation">Machine Liberation by Riotlegion</a>
-        </iframe>
-    </div>
-    <div class="bandcamp-embed">
-        <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3041565000/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
-            <a href="https://crunchpod.bandcamp.com/album/refuse-volume-one-crunch-240">Refuse: Volume One By Riotlegion</a>
-        </iframe>
-    </div>
-</div>
-
-
+        <div id="bandcamp">
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=4087858768/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://riotlegion.bandcamp.com/album/legion-of-chaos">Legion of Chaos by RIOTLEGION</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2595516453/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/god-b-less">God(b)less by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3766194424/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/trigger-warning">Trigger Warning by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=2569400912/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://blindmiceproductions.bandcamp.com/album/machine-liberation">Machine Liberation by Riotlegion</a>
+                </iframe>
+            </div>
+            <div class="bandcamp-embed">
+                <iframe style="border: 0; width: 290px; height: 432px;" src="https://bandcamp.com/EmbeddedPlayer/album=3041565000/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+                    <a href="https://crunchpod.bandcamp.com/album/refuse-volume-one-crunch-240">Refuse: Volume One By Riotlegion</a>
+                </iframe>
+            </div>
+        </div>
 
         <div class="horizontal-bar">
             <img src="hr.png" alt="Decorative Horizontal Bar">
         </div>
     </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var bgImages = [
-            "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
-            "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
-        ];
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var bgImages = [
+                "bg (1).png", "bg (2).png", "bg (3).png", "bg (4).png", "bg (5).png",
+                "bg (6).png", "bg (7).png", "bg (8).png", "bg (9).png", "bg (10).png"
+            ];
 
-        var bgContainer = document.getElementById("bgContainer");
-        var imgElement = bgContainer.querySelector("img"); // Use the existing <img>
+            var bgContainer = document.getElementById("bgContainer");
+            var imgElement = bgContainer.querySelector("img");
 
-        if (!imgElement) {
-            console.error("No <img> found inside #bgContainer");
-            return;
-        }
+            if (!imgElement) {
+                console.error("No <img> found inside #bgContainer");
+                return;
+            }
 
-        // Pick a **completely random** image for every page load
-        var randomIndex = Math.floor(Math.random() * bgImages.length);
-        imgElement.src = bgImages[randomIndex]; 
-        imgElement.style.opacity = 1;
-        imgElement.style.transition = "opacity 1s ease";
-        imgElement.style.width = "100%";
-        imgElement.style.height = "100%";
-        imgElement.style.objectFit = "cover";
-        imgElement.style.position = "absolute";
-
-        // If you still want slideshow behavior, keep this
-        var currentIndex = (randomIndex + 1) % bgImages.length;
-
-        function changeBackground() {
-            imgElement.style.opacity = 0;
-            setTimeout(function () {
-                imgElement.src = bgImages[currentIndex];
-                imgElement.style.opacity = 1;
-                currentIndex = (currentIndex + 1) % bgImages.length;
-            }, 500);
-        }
-
-        setInterval(changeBackground, 6000);
-    });
-</script>
-
-
+            var randomIndex = Math.floor(Math.random() * bgImages.length);
+            imgElement.src = bgImages[randomIndex];
+            imgElement.style.opacity = 1;
+        });
+    </script>
 
 </body>
-
 </html>
